@@ -10,6 +10,7 @@ else ()
 endif ()
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/Modules)
+#set(OpenCV_DIR $ "C:/opencv/build/x64/vc15")
 
 find_package(OpenCV REQUIRED)
 
