@@ -1,0 +1,14 @@
+//
+// Created by PB020 on 1/30/2018.
+//
+
+#ifndef JETSON_VISION_JETSONVISION_HPP
+#define JETSON_VISION_JETSONVISION_HPP
+
+
+class JetsonVision {
+
+};
+
+
+#endif //JETSON_VISION_JETSONVISION_HPP
