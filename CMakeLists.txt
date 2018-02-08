@@ -21,9 +21,7 @@ set(PROJECT_BINARY_DIR include)
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
 set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/)
-#set(SOURCE_FILES src/camera_calibration.cpp)
-#set(SOURCE_FILES src/cpu_main.cpp)
 
-add_executable(Jetson_Vision ${SOURCE_FILES}/JetsonVision.cpp src/JetsonVision.cpp src/JetsonVision.hpp)
+add_executable(Jetson_Vision ${SOURCE_FILES}/JetsonVision.cpp)
 
 target_link_libraries(Jetson_Vision ${OpenCV_LIBS})
