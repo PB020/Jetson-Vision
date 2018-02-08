@@ -15,13 +15,15 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/Modules)
 find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCE_DIR src)
+SET(PROJECT_HEADER_DIR Headers)
 
 set(PROJECT_BINARY_DIR include)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
-set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/)
+set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/JetsonVision.cpp ${PROJECT_SOURCE_DIR}/CalibrateCamera.cpp ${PROJECT_SOURCE_DIR}/CornerDetection.cpp ${PROJECT_SOURCE_DIR}/PoseEstimation.cpp)
+set(HEADER_FILES ${PROJECT_HEADER_DIR}/PoseEstimation.hpp ${PROJECT_HEADER_DIR}/JetsonVision.hpp ${PROJECT_HEADER_DIR}/CornerDetection.hpp ${PROJECT_HEADER_DIR}/CalibrateCamera.hpp)
 
-add_executable(Jetson_Vision ${SOURCE_FILES}/JetsonVision.cpp)
+add_executable(Jetson_Vision ${SOURCE_FILES})
 
 target_link_libraries(Jetson_Vision ${OpenCV_LIBS})
