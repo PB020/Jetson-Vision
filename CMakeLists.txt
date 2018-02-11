@@ -12,8 +12,7 @@ endif ()
 set(OCV_DIR $ "C:/opencv/build")
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${OCV_DIR}/modules)
-set(CMAKE_INCLUDE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/Headers)
-set(CMAKE_INCLUDE_PATH /usr/local/lib)
+set(CMAKE_INCLUDE_PATH C:/opencv/build/include)
 
 
 find_package(OpenCV REQUIRED)
