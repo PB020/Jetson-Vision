@@ -75,7 +75,7 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
 /**
  */
 int main(int argc, char *argv[]) {
-    CommandLineParser parser(argc, argv, keys);
+    CommandLineParser parser(argc, reinterpret_cast<const char *const *>(argv), keys);
     parser.about(about);
 
     if(argc < 6) {

@@ -21,7 +21,7 @@ namespace {
 }
 
 int main(int argc, char *argv[]) {
-    CommandLineParser parser(argc, argv, keys);
+    CommandLineParser parser(argc, reinterpret_cast<const char *const *>(argv), keys);
     parser.about(about);
 
     if(argc < 7) {
