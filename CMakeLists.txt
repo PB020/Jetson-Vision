@@ -9,12 +9,6 @@ else ()
     set (CMAKE_CXX_STANDARD 11)
 endif ()
 
-set(OCV_DIR $ "C:/opencv/build")
-
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${OCV_DIR}/modules)
-set(CMAKE_INCLUDE_PATH C:/opencv/build/include)
-
-
 find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCE_DIR src)
