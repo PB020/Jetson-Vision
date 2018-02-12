@@ -1,13 +1,14 @@
 #include <iostream>
+#include <JetsonVision.h>
 
 class BoardCreation;
 class BoardDetection;
 
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(int argc, char** argv[]){
     cout << "Creating ChArUco Board" << endl;
-    int createBoard(argc, reinterpret_cast<char*>(argv));
+    int BoardCreation::createBoard(argc, *argv);
     cout << "Board Created, Detecting Board" << endl;
-    int detectBoard(argc, reinterpret_cast<char*>(argv));
+    int BoardDetection::detectBoard(argc, *argv);
 }

@@ -12,10 +12,12 @@ endif ()
 find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCE_DIR src)
+set(PROJECT_BINARY_DIR headers)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
-set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/BoardDetection.cpp src/BoardCreation.cpp "src/Jetson Vision.cpp")
+set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/BoardDetection.cpp ${PROJECT_SOURCE_DIR}/BoardCreation.cpp ${PROJECT_SOURCE_DIR}/JetsonVision.cpp)
+set(HEADER_FILES ${PROJECT_HEADER_DIR}/JetsonVision.h)
 add_executable(Jetson_Vision ${SOURCE_FILES})
 
 target_link_libraries(Jetson_Vision ${OpenCV_LIBS})
