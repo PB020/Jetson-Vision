@@ -1,6 +1,8 @@
 #include <opencv2/highgui.hpp>
 #include <opencv2/aruco/charuco.hpp>
 
+class BoardCreation{};
+
 using namespace cv;
 
 namespace {
@@ -20,7 +22,7 @@ namespace {
                     "{si       | false | show generated image }";
 }
 
-int main(int argc, char *argv[]) {
+int createBoard(int argc, char *argv[]) {
     CommandLineParser parser(argc, reinterpret_cast<const char *const *>(argv), keys);
     parser.about(about);
 

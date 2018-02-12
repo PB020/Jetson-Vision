@@ -74,7 +74,7 @@ static bool readDetectorParameters(string filename, Ptr<aruco::DetectorParameter
 
 /**
  */
-int main(int argc, char *argv[]) {
+int detectBoard(int argc, char *argv[]) {
     CommandLineParser parser(argc, reinterpret_cast<const char *const *>(argv), keys);
     parser.about(about);
 
