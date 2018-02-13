@@ -16,8 +16,7 @@ set(PROJECT_BINARY_DIR headers)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
-set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/BoardDetection.cpp ${PROJECT_SOURCE_DIR}/BoardCreation.cpp ${PROJECT_SOURCE_DIR}/JetsonVision.cpp "headers/JetsonVision.h")
-#set(SOURCCE_FILES ${PROJECT_HEADER_DIR}/JetsonVision.h)
+set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/JetsonVision.cpp)
 add_executable(Jetson_Vision ${SOURCE_FILES})
 
 target_link_libraries(Jetson_Vision ${OpenCV_LIBS})
