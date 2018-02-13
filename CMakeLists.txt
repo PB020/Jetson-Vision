@@ -12,7 +12,6 @@ endif ()
 find_package(OpenCV REQUIRED)
 
 set(PROJECT_SOURCE_DIR src)
-set(PROJECT_BINARY_DIR headers)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
