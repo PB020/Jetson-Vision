@@ -15,7 +15,7 @@ set(PROJECT_SOURCE_DIR src)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${OpenCV_INCLUDE_DIRS} ${Protobuf_INCLUDE_DIRS})
 
-set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/JetsonVision.cpp)
+set(SOURCE_FILES ${PROJECT_SOURCE_DIR}/JetsonVision.cpp src/ProjectGUI.cpp)
 add_executable(Jetson_Vision ${SOURCE_FILES})
 
 target_link_libraries(Jetson_Vision ${OpenCV_LIBS})
